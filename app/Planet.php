@@ -4,12 +4,13 @@ namespace App;
 
 use App\Enums\BiomeType;
 use App\Enums\PlanetSize;
+use App\Traits\HasUuid;
 use BenSampo\Enum\Traits\CastsEnums;
 use Illuminate\Database\Eloquent\Model;
 
 class Planet extends Model
 {
-    use CastsEnums;
+    use HasUuid, CastsEnums;
 
     protected $fillable = [
         'name',
